@@ -1,2 +1,2 @@
-# `cargo watch` needs this to root itself.
+# `cargo watch` needs this in order to root itself.
 # The file can be left empty, however.
