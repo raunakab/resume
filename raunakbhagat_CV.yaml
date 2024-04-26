@@ -7,14 +7,14 @@ design:
   disable_page_numbering: false
   page_numbering_style: "PAGE_NUMBER"
   disable_last_updated_date: true
-  header_font_size: "20pt"
+  header_font_size: "18pt"
   text_alignment: "justified"
   margins:
     page:
-      top: "2cm"
-      bottom: "2cm"
-      left: "2cm"
-      right: "2cm"
+      top: "1.5cm"
+      bottom: "1.5cm"
+      left: "1.5cm"
+      right: "1.5cm"
     section_title:
       top: "0.5cm"
       bottom: "0.2cm"
@@ -24,9 +24,9 @@ design:
       date_and_location_width: "4.5cm"
       education_degree_width: "1cm"
     highlights_area:
-      top: "0.10cm"
-      left: "0.4cm"
-      vertical_between_bullet_points: "0.10cm"
+      top: "0.1cm"
+      left: "0.3cm"
+      vertical_between_bullet_points: "0cm"
     header:
       vertical_between_name_and_connections: "0cm"
       bottom: "0.4cm"
@@ -42,44 +42,48 @@ cv:
       username: "raunakbhagat"
     - network: "GitHub"
       username: "raunakab"
-
   sections:
-    # summary:
-    #   - This is an example resume to showcase the capabilities of the open-source
-    #     LaTeX CV generator, [RenderCV](https://github.com/sinaatalay/rendercv). A
-    #     substantial part of the content is taken from [here](https://www.careercup.com/resume),
-    #     where a *clean and tidy CV* pattern is proposed by **Gayle L. McDowell**.
-
+    Overview:
+      - ...
     Work Experience:
       - company: "[Tesla Motors](https://www.tesla.com)"
         position: "Software Engineer - (Vehicle Simulations)"
         location: "Palo Alto, CA"
         start_date: 2023-01
         end_date: 2024-04
-        # highlights:
-        #   - Reduced time to render the user's buddy list by 75% by implementing a
-        #     prediction algorithm.
-        #   - Implemented iChat integration with OS X Spotlight Search by creating a
-        #     tool that extracts metadata from saved chat transcripts and provides metadata
-        #     to a system-wide search database.
-        #   - Redesigned chat file format and implemented backward compatibility for
-        #     search.
+        highlights:
+          - ...
     Internships:
       - company: "[Hygge Energy](https://www.hygge.energy)"
         position: "Full Stack Software Engineer, Intern"
         location: "Toronto, ON"
         start_date: 2021-09
         end_date: 2021-12
+        highlights:
+          - "Implemented a pipeline to transfer data (for redundancy measures) from a GCP database to an AWS database"
+          - "Implemented a web-dashboard (in Angular.js) for accepting client support requests + displaying them to employees"
       - company: "[OnTraccr](https://www.ontraccr.com)"
         position: "Full Stack Software Engineer, Intern"
         location: "Vancouver, BC"
         start_date: 2021-05
         end_date: 2021-08
-      - company: "[Samsung Electronics](https://www.samsung.com/ca/business/mobile-solutions/samsung-knox)"
+        highlights:
+          - "React web-app + React Native mobile application; Node.js backend using the [hapi](https://hapi.dev) HTTP framework"
+          - "Implemented *fullstack* feature to recursively move and archive directories/files in in-app file-system"
+          - "Frontend would make request to update directories/files location; backend would accept + validate request then send a PUT request to AWS S3"
+          - "Developed a ’Draggable’ task page (similar to Jira draggable tasks) for the front-end using [React-Beautiful-DnD](https://www.npmjs.com/package/react-beautiful-dnd)"
+          - "Each drag+drop request would send a PUT request; backend would accept request and update database ordering accordingly"
+          - "Introduced linters + coding-style configuration files ([ESLint](https://eslint.org), [Prettier](https://prettier.io)) to uphold agreed-upon style on backend codebase for cleaner code maintainability, readability"
+
+      - company: "[Samsung Electronics](https://www.samsung.com)"
         position: "Technical Support Engineer, Intern - (Samsung Knox)"
         location: "Vancouver, BC"
         start_date: 2019-09
         end_date: 2020-04
+        highlights:
+          - "Developed applications to implement [Samsung Knox SDK](https://www.samsung.com/ca/business/mobile-solutions/samsung-knox) features to mimic client applications and debug + accelerate partner’s time to market"
+          - "Wrote Python scripts to automate testing of the Knox Partner Program website"
+          - "Used [BeautifulSoup4](https://pypi.org/project/beautifulsoup4), [Selenium](https://pypi.org/project/selenium) for script; it checked for dead links, etc."
 
     Personal Ventures:
       - company: "[UBC Bionics (Student Design Team)](https://ubcbionics.com)"
@@ -87,47 +91,31 @@ cv:
         location: "Vancouver, BC"
         start_date: 2019-02
         end_date: 2023-05
+        highlights:
+          - "Designed a high-level Rust library [Raestro](https://docs.rs/raestro/latest/raestro) to communicate with [Micro-Maestro](https://www.pololu.com/product/1350) servo control board; officially released as Open Source Software project licensed under MIT OSS License"
+          - "Designed an asynchronous, non-blocking scheduler to schedule each task (e.g., reading input from sensors) sequentially"
+          - "Scheduler would accept task and then route it onto a threadpool to be executed"
+          - "Developed CI/CD pipeline to run all builds of the library on custom servers"
+          - "Building web application to remotely send command requests to arm and run batch-tests"
+          - "Built in AWS; EC2 instance as backend serving RESTful APIs"
+          - "Web-sockets to connect backend with arms"
+          - "Participants in the [2020 Cybathlon](https://cybathlon.ethz.ch/en); was unfortunately cancelled due to COVID"
       - company: "Wavy App"
         position: "Co-Founder, Full Stack Software Engineer"
         location: "Vancouver, BC"
         start_date: 2021-06
         end_date: 2022-07
+        highlights:
+          - "*Wavy* was an application that allows university students to create and share events publicly with other students on campus"
+          - "Rust backend + React Native mobile application"
+          - "Backend was built in Rust, using [Actix web-framework](https://actix.rs)"
+          - "APIs are secured using JWT authentication; stateless backend auth; OAuth tokens provided by third-parties (like Google, Facebook, Twitter) and verified by our backend"
+          - "Data stored in a PostgreSQL database; inputs sanitized using [Sea-Query](https://www.sea-ql.org)"
+          - "Front-end built using React-Native, with [Redux](https://react-redux.js.org) for local storage"
+          - "Was focusing on developing animations using [react-native-reanimated (v2)](https://docs.swmansion.com/react-native-reanimated) and [react-native-gesture-handler](https://docs.swmansion.com/react-native-gesture-handler)"
+          - "Product eventually failed because of lack of effective marketing; learning experience since it was my first startup"
 
-    #   - company: Microsoft Corporation
-    #     position: Lead Student Ambassador
-    #     location: WA, USA
-    #     start_date: 2003-09
-    #     end_date: 2005-04
-    #     highlights:
-    #       - Promoted to Lead Student Ambassador in the Fall of 2004, supervised 10
-    #         - 15 Student Ambassadors.
-    #       - 'Created and taught a computer science course, CSE 099: Software Design
-    #         and Development.'
-    #   - company: University of Pennsylvania
-    #     position: Head Teaching Assistant
-    #     location: PA, USA
-    #     start_date: 2001-10
-    #     end_date: 2005-05
-    #     highlights:
-    #       - Implemented a user interface for the VS open file switcher (ctrl-tab)
-    #         and extended it to tool windows.
-    #       - Created a service to provide gradient across VS and VS add-ins. Optimized
-    #         service via caching.
-    #       - Programmer Productivity Research Center (Summers 2001, 2002)
-    #       - 'Built app to compute the similarity of all methods in a code base, reduced
-    #         time from $\mathcal{O}(n^2)$ to $\mathcal{O}(n \log n)$. '
-    #       - Created a test case generation tool that creates random XML docs from
-    #         XML Schema.
-    #   - company: Microsoft Corporation
-    #     position: Software Design Engineer, Intern
-    #     location: WA, USA
-    #     start_date: 2003-06
-    #     end_date: 2003-08
-    #     highlights:
-    #       - Promoted to Lead Student Ambassador in the Fall of 2004, supervised 10
-    #         - 15 Student Ambassadors.
-
-    education:
+    Education:
       - institution: "University of British Columbia, Vancouver"
         degree: "B.Sc."
         area: "Computer Science & Mathematics"
@@ -137,47 +125,6 @@ cv:
           - "GPA: 80%"
           - "CS courses: Data Structures + Algorithms (Introductory, Intermediary, Advanced), Operating Systems, Computer Networking, Computer Graphics, Numerical Optimization, Compiler Construction"
           - "Math courses: Calculus I - IV, Linear Algebra, Differential Equation (Ordinary + Partial), Probability"
-
-    # publications:
-    #   - title: Magneto-Thermal Thin Shell Approximation for 3D Finite Element Analysis
-    #       of No-Insulation Coils
-    #     authors:
-    #       - Albert Smith
-    #       - raunakbhagat
-    #       - Jane Derry
-    #       - Harry Tom
-    #       - Frodo Baggins
-    #     doi: 10.1109/TASC.2023.3340648
-    #     date: 2004-01
-
-    # projects:
-    #   - name: "Wavy App"
-    #     start_date: 2021-06
-    #     end_date: 2022-07
-    #     highlights:
-    #       - Developed an electronic classroom where multiple users can view and simultaneously
-    #         draw on a "chalkboard" with each person's edits synchronized.
-    #       - Used C++ and MFC.
-    #   - name: Synchronized Calendar
-    #     start_date: 2003
-    #     end_date: 2004
-    #     highlights:
-    #       - Developed a desktop calendar with globally shared and synchronized calendars,
-    #         allowing users to schedule meetings with other users.
-    #       - Used C#.NET, SQL, and XML.
-    #   - name: Operating System
-    #     date: '2002'
-    #     highlights:
-    #       - Developed a UNIX-style OS with a scheduler, file system, text editor,
-    #         and calculator.
-    #       - Used C.
-
-    # additional_experience_and_awards:
-    #   - label: Instructor (2003 - 2005)
-    #     details: Taught two full-credit Computer Science courses.
-    #   - label: Third Prize, Senior Design Projects
-    #     details: Awarded 3rd prize for a synchronized calendar project out of 100
-    #       projects.
 
     technologies:
       - label: "Languages"
