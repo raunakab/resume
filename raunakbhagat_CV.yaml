@@ -52,7 +52,15 @@ cv:
         start_date: 2023-01
         end_date: 2024-04
         highlights:
-          - ...
+          - "Worked on our internal Rust simulation engine; the engine was capable of deterministically simulating vehicle firmware in simulation-time, facilitating the transfer of messages to and from nodes, and running physics models of various ECU components of the car"
+          - "Brought up the Cybertruck's Steering System firmware into our software simulation"
+          - "Wrote the infrastructure needed to compile all steering firmware into shared-objects, download the physics models from artifact storage, link all of them together, and run tests as a single build command in [SCons](https://scons.org)"
+          - "Brought up an ECU component into software simulation that was built using [Buck2](https://buck2.build)"
+          - "Wrote that ECU component's simulated-IO code in C in order to allow it to interface with our Rust engine"
+          - "Built out and optimized test-reporting pipeline for another ECU component"
+          - "Tests would be executed on a cluster of compute nodes; each node would produce gigabytes worth of data for which post-test analysis would need to be performed"
+          - "Instead of sending gigabytes of data to a shared location for analysis, instead wrote an application to analyze data in a per-node, distributed fashion and then post all the partial reports to a shared NFS for aggregation into a final report"
+          - "Reduced network file transfer costs from 40gbs down to <1gb"
     Internships:
       - company: "[Hygge Energy](https://www.hygge.energy)"
         position: "Full Stack Software Engineer, Intern"
