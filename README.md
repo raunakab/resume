@@ -14,7 +14,13 @@ Internally rendered using `pdflatex` (auto installed alongside `RenderCV`).
 Enter a python venv, install the required dependencies, and then run the runner script provided.
 The runner script will watch the main YAML file and rebuild everytime it is written to.
 ```sh
+# If you don't have a venv created already
 python3 -m venv venv
+
+# If you have a venv created already
+# Specific for the fish shell
+source venv/bin/activate.fish
+
 pip3 install -r requirements.txt
 ./run.sh
 ```
