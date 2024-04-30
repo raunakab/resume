@@ -21,5 +21,7 @@ python3 -m venv venv
 In a new terminal, open the rendered output.
 The PDF should refresh everytime you write to the main YAML file.
 ```sh
-open rendercv_output/${NAME}.pdf
+open rendercv_output/${NAME}_CV.pdf
 ```
+where the `${NAME}` variable is whatever the `cv.name` value inside of the main YAML file is.
+Usually, there should only ever be a single PDF file in the `rendercv_output` directory, so opening whatever file in that directory that ends with the `pdf` extension should suffice.
