@@ -11,10 +11,11 @@ Internally rendered using `pdflatex` (auto installed alongside `RenderCV`).
 4. [`cargo-watch`](https://crates.io/crates/cargo-watch)
 
 # Build Instructions
-Enter a python venv and run the runner script provided.
+Enter a python venv, install the required dependencies, and then run the runner script provided.
 The runner script will watch the main YAML file and rebuild everytime it is written to.
 ```sh
 python3 -m venv venv
+pip3 install -r requirements.txt
 ./run.sh
 ```
 
