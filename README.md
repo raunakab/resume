@@ -7,8 +7,7 @@ Internally rendered using `pdflatex` (auto installed alongside `RenderCV`).
 # Build Requirements
 1. [`python3`](https://www.python.org)
 2. [`RenderCV`](https://sinaatalay.github.io/rendercv)
-3.
-[`cargo`](https://www.rust-lang.org/tools/install) (comes with the `rust` install) + [`cargo-watch`](https://crates.io/crates/cargo-watch).
+3. [`cargo`](https://www.rust-lang.org/tools/install) (comes with the `rust` install) + [`cargo-watch`](https://crates.io/crates/cargo-watch).
 You could technically use any piece of software that observes a file (or a set of files) and reruns a command when theres a write to it/them.
 [`Nodemon`](https://www.npmjs.com/package/nodemon) may potentially fit the bill here; I chose to use `cargo watch` since I already had that installed.
 
