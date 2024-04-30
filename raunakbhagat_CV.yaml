@@ -20,7 +20,7 @@ design:
       bottom: "0.2cm"
     entry_area:
       left_and_right: "0.2cm"
-      vertical_between: "0.2cm"
+      vertical_between: "0.3cm"
       date_and_location_width: "4.5cm"
       education_degree_width: "1cm"
     highlights_area:
