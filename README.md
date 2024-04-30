@@ -5,10 +5,10 @@ Built using [`RenderCV`](https://sinaatalay.github.io/rendercv).
 Internally rendered using `pdflatex` (auto installed alongside `RenderCV`).
 
 # Build Requirements
-1. [`Python3`](https://www.python.org)
+1. [`python3`](https://www.python.org)
 2. [`RenderCV`](https://sinaatalay.github.io/rendercv)
-3. [`Cargo`](https://www.rust-lang.org/tools/install) (comes with the `Rust` install)
-4. [`Cargo Watch`](https://crates.io/crates/cargo-watch)
+3. [`cargo`](https://www.rust-lang.org/tools/install) (comes with the `rust` install)
+4. [`cargo-watch`](https://crates.io/crates/cargo-watch)
 
 # Build Instructions
 Enter a python venv and run the runner script provided.
