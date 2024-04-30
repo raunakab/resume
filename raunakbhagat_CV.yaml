@@ -44,7 +44,8 @@ cv:
       username: "raunakab"
   sections:
     Overview:
-      - ...
+      - Experience in systems engineering, build-systems, backend and frontend web application development, and Linux container services + container orchestration (Docker + Kubernetes).
+      - Notable experiences include working at **Tesla Motors** (worked on a Rust simulation engine compiled and linked with SCons), **Ontraccr** (full stack web application development with a React frontend and Node.js backend), **UBC Bionics** (firmware code development in Rust), and **Wavy** (wrote a full stack web application development with a React Native mobile application and Rust backend).
     Work Experience:
       - company: "[Tesla Motors](https://www.tesla.com)"
         position: "Software Engineer - (Vehicle Simulations)"
