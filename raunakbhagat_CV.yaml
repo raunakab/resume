@@ -15,7 +15,7 @@ cv:
       username: raunakbh
   sections:
     Overview:
-      - Experience in systems engineering, build-systems, backend and frontend web application development, and Linux container services + container orchestration (Docker + Kubernetes).
+      - Experience in distributed computing, query engines, systems engineering, build systems, and fullstack application development.
       - Notable experiences include working at **Eventual Computing** (worked on their core, distributed query engine written in Rust), **Tesla Motors** (worked on an internal simulation engine also written in Rust), and **Ontraccr** (contribtuted to a full stack web application with a React frontend and Node.js backend).
     Work Experience:
       - company: "[Eventual Computing](https://www.eventualcomputing.com)"
