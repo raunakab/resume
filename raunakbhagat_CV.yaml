@@ -1,47 +1,18 @@
 design:
   theme: "classic"
-  font_size: "10pt"
-  page_size: "letterpaper"
-  color: "#004f90"
-  disable_external_link_icons: false
-  disable_page_numbering: false
-  page_numbering_style: "PAGE_NUMBER"
-  disable_last_updated_date: true
-  header_font_size: "18pt"
-  text_alignment: "justified"
-  margins:
-    page:
-      top: "1.5cm"
-      bottom: "1.5cm"
-      left: "1.5cm"
-      right: "1.5cm"
-    section_title:
-      top: "0.5cm"
-      bottom: "0.2cm"
-    entry_area:
-      left_and_right: "0.2cm"
-      vertical_between: "0.3cm"
-      date_and_location_width: "4.5cm"
-      education_degree_width: "1cm"
-    highlights_area:
-      top: "0.1cm"
-      left: "0.3cm"
-      vertical_between_bullet_points: "0cm"
-    header:
-      vertical_between_name_and_connections: "0cm"
-      bottom: "0.4cm"
-      horizontal_between_connections: "0.2cm"
 
 cv:
   name: "Raunak Bhagat"
-  location: "Palo Alto, CA"
-  email: "rabhagat31@gmail.com"
-  website: "https://raunakab.github.io"
+  location: "San Francisco, CA"
+  email: "r@rabh.io"
+  website: "https://rabh.io"
   social_networks:
     - network: "LinkedIn"
       username: "raunakbhagat"
     - network: "GitHub"
       username: "raunakab"
+    - network: "X"
+      username: "raunakbh"
   sections:
     Overview:
       - Experience in systems engineering, build-systems, backend and frontend web application development, and Linux container services + container orchestration (Docker + Kubernetes).
@@ -61,7 +32,7 @@ cv:
           - "Built out and optimized test-reporting pipeline for another ECU component"
           - "Tests would be executed on a cluster of compute nodes; each node would produce gigabytes worth of data for which post-test analysis would need to be performed"
           - "Instead of sending gigabytes of data to a shared location for analysis, instead wrote an application to analyze data in a per-node, distributed fashion and then post all the partial reports to a shared NFS for aggregation into a final report"
-          - "Reduced network file transfer costs from 40gbs down to <1gb"
+          - "Reduced network file transfer costs from 40gb down to less than 1gb"
     Internships:
       - company: "[Hygge Energy](https://www.hygge.energy)"
         position: "Full Stack Software Engineer, Intern"
