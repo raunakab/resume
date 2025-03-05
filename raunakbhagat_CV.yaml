@@ -15,9 +15,16 @@ cv:
       username: "raunakbh"
   sections:
     Overview:
-      - Experience in systems engineering, build-systems, backend and frontend web application development, and Linux container services + container orchestration (Docker + Kubernetes).
-      - Notable experiences include working at **Tesla Motors** (worked on a Rust simulation engine compiled and linked with SCons), **Ontraccr** (full stack web application development with a React frontend and Node.js backend), **UBC Bionics** (firmware code development in Rust), and **Wavy** (wrote a full stack web application development with a React Native mobile application and Rust backend).
+      - "Experience in systems engineering, build-systems, backend and frontend web application development, and Linux container services + container orchestration (Docker + Kubernetes)."
+      - "Notable experiences include working at **Eventual Computing** (worked on their core, distributed query engine written in Rust), **Tesla Motors** (worked on an internal simulation engine also written in Rust), and **Ontraccr** (contribtuted to a full stack web application with a React frontend and Node.js backend)."
     Work Experience:
+      - company: "[Eventual Computing](https://www.eventualcomputing.com)"
+        position: "Software Engineer - (Core Query Engine + Infrastructure)"
+        location: "San Francisco, CA"
+        start_date: 2024-08
+        end_date: 2025-02
+        highlights:
+          - ...
       - company: "[Tesla Motors](https://www.tesla.com)"
         position: "Software Engineer - (Vehicle Simulations)"
         location: "Palo Alto, CA"
@@ -34,14 +41,6 @@ cv:
           - "Instead of sending gigabytes of data to a shared location for analysis, instead wrote an application to analyze data in a per-node, distributed fashion and then post all the partial reports to a shared NFS for aggregation into a final report"
           - "Reduced network file transfer costs from 40gb down to less than 1gb"
     Internships:
-      - company: "[Hygge Energy](https://www.hygge.energy)"
-        position: "Full Stack Software Engineer, Intern"
-        location: "Toronto, ON"
-        start_date: 2021-09
-        end_date: 2021-12
-        highlights:
-          - "Implemented a pipeline to transfer data (for redundancy measures) from a GCP database to an AWS database"
-          - "Implemented a web-dashboard (in Angular.js) for accepting client support requests + displaying them to employees"
       - company: "[OnTraccr](https://www.ontraccr.com)"
         position: "Full Stack Software Engineer, Intern"
         location: "Vancouver, BC"
@@ -54,17 +53,6 @@ cv:
           - "Developed a ’Draggable’ task page (similar to Jira draggable tasks) for the front-end using [React-Beautiful-DnD](https://www.npmjs.com/package/react-beautiful-dnd)"
           - "Each drag+drop request would send a PUT request; backend would accept request and update database ordering accordingly"
           - "Introduced linters + coding-style configuration files ([ESLint](https://eslint.org), [Prettier](https://prettier.io)) to uphold agreed-upon style on backend codebase for cleaner code maintainability, readability"
-
-      - company: "[Samsung Electronics](https://www.samsung.com)"
-        position: "Technical Support Engineer, Intern - (Samsung Knox)"
-        location: "Vancouver, BC"
-        start_date: 2019-09
-        end_date: 2020-04
-        highlights:
-          - "Developed applications to implement [Samsung Knox SDK](https://www.samsung.com/ca/business/mobile-solutions/samsung-knox) features to mimic client applications and debug + accelerate partner’s time to market"
-          - "Wrote Python scripts to automate testing of the Knox Partner Program website"
-          - "Used [BeautifulSoup4](https://pypi.org/project/beautifulsoup4), [Selenium](https://pypi.org/project/selenium) for script; it checked for dead links, etc."
-
     Personal Ventures:
       - company: "[UBC Bionics (Student Design Team)](https://ubcbionics.com)"
         position: "Lead Software Engineer - (Embedded Systems)"
@@ -74,11 +62,8 @@ cv:
         highlights:
           - "Designed a high-level Rust library [Raestro](https://docs.rs/raestro/latest/raestro) to communicate with [Micro-Maestro](https://www.pololu.com/product/1350) servo control board; officially released as Open Source Software project licensed under MIT OSS License"
           - "Designed an asynchronous, non-blocking scheduler to schedule each task (e.g., reading input from sensors) sequentially"
-          - "Scheduler would accept task and then route it onto a threadpool to be executed"
           - "Developed CI/CD pipeline to run all builds of the library on custom servers"
-          - "Building web application to remotely send command requests to arm and run batch-tests"
-          - "Built in AWS; EC2 instance as backend serving RESTful APIs"
-          - "Web-sockets to connect backend with arms"
+          - "Built web application to remotely send command requests to arm and run batch-tests"
           - "Participants in the [2020 Cybathlon](https://cybathlon.ethz.ch/en); was unfortunately cancelled due to COVID"
       - company: "Wavy App"
         position: "Co-Founder, Full Stack Software Engineer"
@@ -88,13 +73,8 @@ cv:
         highlights:
           - "*Wavy* was an application that allows university students to create and share events publicly with other students on campus"
           - "Rust backend + React Native mobile application"
-          - "Backend was built in Rust, using [Actix web-framework](https://actix.rs)"
-          - "APIs are secured using JWT authentication; stateless backend auth; OAuth tokens provided by third-parties (like Google, Facebook, Twitter) and verified by our backend"
-          - "Data stored in a PostgreSQL database; inputs sanitized using [Sea-Query](https://www.sea-ql.org)"
-          - "Front-end built using React-Native, with [Redux](https://react-redux.js.org) for local storage"
-          - "Was focusing on developing animations using [react-native-reanimated (v2)](https://docs.swmansion.com/react-native-reanimated) and [react-native-gesture-handler](https://docs.swmansion.com/react-native-gesture-handler)"
-          - "Product eventually failed because of lack of effective marketing; learning experience since it was my first startup"
-
+          - "Backend was built in Rust (used OAuth2 for authentication); front-end was built using React-Native"
+          - "Deployed backend onto AWS EC2; single machine was able to service 80k requests per second"
     Education:
       - institution: "University of British Columbia, Vancouver"
         degree: "B.Sc."
@@ -105,15 +85,8 @@ cv:
           - "GPA: 80%"
           - "CS courses: Data Structures + Algorithms (Introductory, Intermediary, Advanced), Operating Systems, Computer Networking, Computer Graphics, Numerical Optimization, Compiler Construction"
           - "Math courses: Calculus I - IV, Linear Algebra, Differential Equation (Ordinary + Partial), Probability"
-
-    technologies:
+    Technologies:
       - label: "Languages"
-        details: "C, Rust, Python, Javascript, Typescript, HTML, CSS, LaTeX"
-      - label: "Build Systems"
-        details: "Buck2, SCons, Cargo, NPM, Yarn"
-      - label: "Frontend Libraries"
-        details: "React, React Native"
-      - label: "Backend Libraries"
-        details: "Hyper.rs, ExpressJS"
+        details: "C, Rust, Python, Javascript, Typescript"
       - label: "Tools"
-        details: "Git, Unix-like Systems (e.g., macOS, Linux)"
+        details: "Git, macOS+Linux, Buck2, SCons, [uv](https://docs.astral.sh/uv)"
