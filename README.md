@@ -3,12 +3,12 @@
 My personal resume.
 Built using [`RenderCV`](https://sinaatalay.github.io/rendercv) (which internally uses `pdflatex` for rendering).
 
-# Build Requirements
+## Prerequisites
 
 1. [`uv`](https://docs.astral.sh/uv)
 2. [`RenderCV`](https://sinaatalay.github.io/rendercv)
 
-# Build Instructions
+## Instructions
 
 ```sh
 # create a virtual env and install all the required dependencies
