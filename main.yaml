@@ -18,13 +18,25 @@ cv:
       - Experience in distributed computing, query engines, systems engineering, build systems, and fullstack application development.
       - Notable experiences include working at **Eventual Computing** (worked on their core, distributed query engine written in Rust), **Tesla Motors** (worked on an internal simulation engine also written in Rust), and **Ontraccr** (contribtuted to a full stack web application with a React frontend and Node.js backend).
     Work Experience:
+      - company: "[Onyx AI](https://www.eventualcomputing.com)"
+        position: Software Engineer - (Full Stack)
+        location: San Francisco, CA
+        start_date: 2025-04
+        end_date: present
+        highlights: []
       - company: "[Eventual Computing](https://www.eventualcomputing.com)"
         position: Software Engineer - (Core Query Engine + Infrastructure)
         location: San Francisco, CA
         start_date: 2024-08
         end_date: 2025-02
         highlights:
-          - ...
+          - Worked on our core query engine, observability into the query engine, and internal infrastructure
+          - Original author of [daft-cli](https://pypi.org/project/daft-cli), a tool to spin up and manage ray clusters in AWS
+          - Worked on internal infrastructure to run builds and benchmarks
+          - Optimized build pipeline to bring builds down from 10min+ to less than 5min (non-cached) and less than 1min (cached)
+          - Shipped [daft-dashboard](https://github.com/Eventual-Inc/Daft/tree/main/src/daft-dashboard), a locally served dashboard launched upon startup that captures broadcasts from the query engine displays it to the end-user
+          - Backend built in rust; frontend in next.js (statically compiled)
+          - Dashboard was released as a binary, downloadable via PyPi
       - company: "[Tesla Motors](https://www.tesla.com)"
         position: Software Engineer - (Vehicle Simulations)
         location: Palo Alto, CA
