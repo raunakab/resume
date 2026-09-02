@@ -16,7 +16,7 @@ cv:
   sections:
     Overview:
       - Experience in distributed computing, query engines, systems engineering, build systems, and fullstack application development.
-      - Notable experiences include working at **Onyx AI** (redesigned and rebuilt the frontend of their AI application), **Eventual Computing** (worked on their core, distributed query engine written in Rust), **Tesla Motors** (worked on an internal simulation engine also written in Rust), and **Ontraccr** (contributed to a full stack web application with a React frontend and Node.js backend).
+      - Notable experiences include working at **Onyx AI** (refreshed + redesigned the entire frontend of Onyx), **Eventual Computing** (worked on the core, distributed query engine written in Rust), **Tesla Motors** (worked on an internal simulation engine also written in Rust), and **Ontraccr** (contributed to a full stack web application with a React frontend and Node.js backend).
     Work Experience:
       - company: "[Onyx AI](https://onyx.app)"
         position: Software Engineer - (Full Stack)
@@ -24,11 +24,11 @@ cv:
         start_date: 2025-04
         end_date: present
         highlights:
-          - Led the redesign of the entire web application, from information architecture down to the component level
-          - Original author of [Opal](https://github.com/onyx-dot-app/onyx/tree/main/web/lib/opal), the team's frontend UI component library
-          - Built the response-streaming pipeline for smooth, incremental rendering of model output
+          - Led the *full* refresh + redesign of the entire frontend web application, from information architecture down to the component level
+          - Original author of [Opal](https://github.com/onyx-dot-app/onyx/tree/main/web/lib/opal), Onyx's frontend UI component library
+          - Refined the response-streaming pipeline for smooth, incremental rendering of model output
           - Improved page-load performance (first contentful paint, time-to-interactive) and introduced graceful error handling across the app
-      - company: "[Eventual Computing](https://www.eventualcomputing.com)"
+      - company: "[Eventual Computing](https://eventualcomputing.com)"
         position: Software Engineer - (Core Query Engine + Infrastructure)
         location: San Francisco, CA
         start_date: 2024-08
@@ -41,7 +41,7 @@ cv:
           - Shipped [daft-dashboard](https://github.com/Eventual-Inc/Daft/tree/main/src/daft-dashboard), a locally served dashboard launched upon startup that captures broadcasts from the query engine displays it to the end-user
           - Backend built in rust; frontend in next.js (statically compiled)
           - Dashboard was released as a binary, downloadable via PyPi
-      - company: "[Tesla Motors](https://www.tesla.com)"
+      - company: "[Tesla Motors](https://tesla.com)"
         position: Software Engineer - (Vehicle Simulations)
         location: Palo Alto, CA
         start_date: 2023-01
