@@ -1,36 +1,48 @@
 # Resume
+
 My personal resume.
+Built using [`RenderCV`](https://sinaatalay.github.io/rendercv) (which internally uses [`typst`](https://typst.app) for rendering).
 
-Built using [`RenderCV`](https://sinaatalay.github.io/rendercv).
-Internally rendered using `pdflatex` (auto installed alongside `RenderCV`).
+## Prerequisites
 
-# Build Requirements
-1. [`python3`](https://www.python.org)
-2. [`RenderCV`](https://sinaatalay.github.io/rendercv)
-3. [`cargo`](https://www.rust-lang.org/tools/install) (comes with the `rust` install) + [`cargo-watch`](https://crates.io/crates/cargo-watch).
-You could technically use any piece of software that observes a file (or a set of files) and reruns a command when theres a write to it/them.
-[`Nodemon`](https://www.npmjs.com/package/nodemon) may potentially fit the bill here.
-I chose to use `cargo watch` instead since I already had that installed.
+1. [`uv`](https://docs.astral.sh/uv)
 
-# Build Instructions
-Enter a python venv, install the required dependencies, and then run the runner script provided.
-The runner script will watch the main YAML file and rebuild everytime it is written to.
+## Setup
+
 ```sh
-# If you don't have a venv created already
-python3 -m venv venv
-
-# If you have a venv created already
-# Specific for the fish shell
-source venv/bin/activate.fish
-
-pip3 install -r requirements.txt
-./run.sh
+# create a virtual env and install all the required dependencies
+uv sync
 ```
 
-In a new terminal, open the rendered output.
-The PDF should refresh everytime you write to the main YAML file.
+## Rendering
+
+Edit [`main.yaml`](./main.yaml), then render it in one of two ways.
+
+### One-shot
+
+Renders once and exits. Use this when you want to compile at the end of an editing session, and in any script or CI job.
+
 ```sh
-open rendercv_output/${NAME}_CV.pdf
+uv run rendercv render main.yaml
+
+open rendercv_output/Raunak_Bhagat_CV.pdf
 ```
-where the `${NAME}` variable is whatever the `cv.name` value inside of the main YAML file is.
-Usually, there should only ever be a single PDF file in the `rendercv_output` directory, so opening whatever file in that directory that ends with the `pdf` extension should suffice.
+
+### Watch mode
+
+Stays resident and re-renders on every save, so the pdf refreshes as you write. Exit with `Ctrl-C`.
+
+```sh
+uv run rendercv render --watch main.yaml
+
+# in a new terminal, open the generated pdf file
+open rendercv_output/Raunak_Bhagat_CV.pdf
+```
+
+## Notes
+
+`rendercv` writes into `rendercv_output/` without clearing it first, so per-page `.png` files from an older, longer draft can linger. The pdf itself is always rewritten in full, and the directory is gitignored. To start clean:
+
+```sh
+rm -rf rendercv_output && uv run rendercv render main.yaml
+```

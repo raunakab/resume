@@ -1,5 +1,2 @@
-# python
-venv
-
-# rendercv
+.venv
 rendercv_output
