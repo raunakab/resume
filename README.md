@@ -2,16 +2,11 @@
 
 My personal resume.
 Written as YAML and rendered to PDF by [`rendercv`](https://docs.rendercv.com).
-
-[**Download the latest PDF**](https://github.com/raunakab/resume/releases/latest)
+You can download the latest version by visiting the [**releases tab**](https://github.com/raunakab/resume/releases/latest).
 
 ## Setup
 
-Install [`uv`](https://docs.astral.sh/uv). Then run to download deps:
-
-```sh
-uv sync
-```
+Install [`uv`](https://docs.astral.sh/uv). Then, run `uv sync` to download the dependencies.
 
 ## Rendering
 
