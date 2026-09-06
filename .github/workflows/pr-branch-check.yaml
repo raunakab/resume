@@ -1,0 +1,36 @@
+name: PR Branch Check
+
+on:
+  pull_request:
+    branches:
+      - main
+    types:
+      - opened
+      - reopened
+      - synchronize
+
+permissions:
+  contents: read
+
+jobs:
+  validate_branch_name:
+    runs-on: ubuntu-latest
+    timeout-minutes: 45
+    steps:
+      - name: Check branch name for an allowed prefix
+        env:
+          BRANCH_NAME: ${{ github.head_ref }}
+        run: |
+          echo "Branch: $BRANCH_NAME"
+          if [[ ! "$BRANCH_NAME" =~ ^(feat|fix|docs|test|ci|refactor|perf|chore|revert|build)/.+ ]]; then
+            echo "::error::❌ Your branch name does not start with an allowed prefix.
+              Branches are named <prefix>/<description>, using the same prefixes the PR title check accepts, so a branch and the PR it opens describe the same kind of change.
+
+              Allowed prefixes: feat, fix, docs, test, ci, refactor, perf, chore, revert, build
+
+              **Here are some examples of valid branch names:**
+              - feat/add-publications-section
+              - fix/broken-render-on-empty-section
+              - ci/add-release-workflow"
+            exit 1
+          fi
