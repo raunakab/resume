@@ -8,6 +8,10 @@ on:
       - pyproject.toml
       - uv.lock
       - .github/workflows/release.yml
+  # Deliberately unfiltered: a required check that never runs leaves the PR
+  # pending forever, so this must report on every PR, not just resume edits.
+  pull_request:
+    branches: [main]
   workflow_dispatch:
 
 permissions:
@@ -25,7 +29,7 @@ jobs:
         with:
           fetch-depth: 0 # tags are needed to disambiguate same-day releases
 
-      - uses: astral-sh/setup-uv@v10
+      - uses: astral-sh/setup-uv@v10.0.1
         with:
           enable-cache: true
 
@@ -53,6 +57,7 @@ jobs:
           echo "path=$path" >>"$GITHUB_OUTPUT"
 
       - uses: softprops/action-gh-release@v3
+        if: github.event_name != 'pull_request'
         with:
           tag_name: ${{ steps.version.outputs.tag }}
           name: Resume ${{ steps.version.outputs.tag }}
