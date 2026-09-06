@@ -37,7 +37,7 @@ No manual step, no version to bump.
 
 Tags are the UTC date, e.g. `2026.09.06`; a second release on the same day
 becomes `2026.09.06-2`, a third `2026.09.06-3`. The attached asset is
-`raunak-bhagat-<tag>.pdf`.
+`raunak-bhagat-<mm>-<dd>-<yyyy>.pdf`.
 
 Only changes to `main.yaml`, `pyproject.toml`, or `uv.lock` trigger a release,
 so prose-only merges skip it. To cut one by hand, dispatch the workflow from
