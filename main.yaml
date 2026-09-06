@@ -11,8 +11,6 @@ cv:
       username: raunakbhagat
     - network: GitHub
       username: raunakab
-    - network: X
-      username: raunakbh
   sections:
     Overview:
       - Experience in distributed computing, query engines, systems engineering, build systems, and fullstack application development.
