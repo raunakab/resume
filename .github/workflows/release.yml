@@ -52,7 +52,7 @@ jobs:
       - name: Stamp the version onto the asset
         id: asset
         run: |
-          path="Raunak_Bhagat_CV_${{ steps.version.outputs.tag }}.pdf"
+          path="raunak-bhagat-${{ steps.version.outputs.tag }}.pdf"
           cp rendercv_output/Raunak_Bhagat_CV.pdf "$path"
           echo "path=$path" >>"$GITHUB_OUTPUT"
 
