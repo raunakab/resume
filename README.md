@@ -2,16 +2,11 @@
 
 My personal resume.
 Written as YAML and rendered to PDF by [`rendercv`](https://docs.rendercv.com).
-
-[**Download the latest PDF**](https://github.com/raunakab/resume/releases/latest)
+You can download the latest version by visiting the [**releases tab**](https://github.com/raunakab/resume/releases/latest).
 
 ## Setup
 
-Install [`uv`](https://docs.astral.sh/uv). Then run to download deps:
-
-```sh
-uv sync
-```
+Install [`uv`](https://docs.astral.sh/uv). Then, run `uv sync` to download the dependencies.
 
 ## Rendering
 
@@ -42,7 +37,7 @@ No manual step, no version to bump.
 
 Tags are the UTC date, e.g. `2026.09.06`; a second release on the same day
 becomes `2026.09.06-2`, a third `2026.09.06-3`. The attached asset is
-`Raunak_Bhagat_CV_<tag>.pdf`.
+`raunak-bhagat-<mm>-<dd>-<yyyy>.pdf`.
 
 Only changes to `main.yaml`, `pyproject.toml`, or `uv.lock` trigger a release,
 so prose-only merges skip it. To cut one by hand, dispatch the workflow from

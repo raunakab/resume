@@ -1,4 +1,4 @@
-name: release
+name: Release
 
 on:
   push:
@@ -8,6 +8,10 @@ on:
       - pyproject.toml
       - uv.lock
       - .github/workflows/release.yml
+  # Deliberately unfiltered: a required check that never runs leaves the PR
+  # pending forever, so this must report on every PR, not just resume edits.
+  pull_request:
+    branches: [main]
   workflow_dispatch:
 
 permissions:
@@ -25,13 +29,11 @@ jobs:
         with:
           fetch-depth: 0 # tags are needed to disambiguate same-day releases
 
-      - uses: astral-sh/setup-uv@v10
+      - uses: astral-sh/setup-uv@v10.0.1
         with:
           enable-cache: true
 
       - run: uv sync --frozen
-
-      - run: uv run rendercv render main.yaml
 
       - name: Pick a version tag
         id: version
@@ -43,18 +45,24 @@ jobs:
             n=$((n + 1))
             tag="$base-$n"
           done
+          # Both spellings of the same day, derived from one date call so they
+          # cannot straddle a UTC midnight between steps.
+          year="${base%%.*}"
+          rest="${base#*.}"
           echo "tag=$tag" >>"$GITHUB_OUTPUT"
+          echo "stamp=${rest%%.*}-${rest#*.}-$year" >>"$GITHUB_OUTPUT"
 
-      - name: Stamp the version onto the asset
-        id: asset
+      - name: Render the resume under the release name
+        id: render
         run: |
-          path="Raunak_Bhagat_CV_${{ steps.version.outputs.tag }}.pdf"
-          cp rendercv_output/Raunak_Bhagat_CV.pdf "$path"
+          path="rendercv_output/raunak-bhagat-${{ steps.version.outputs.stamp }}.pdf"
+          uv run rendercv render main.yaml --pdf-path "$path"
           echo "path=$path" >>"$GITHUB_OUTPUT"
 
       - uses: softprops/action-gh-release@v3
+        if: github.event_name != 'pull_request'
         with:
           tag_name: ${{ steps.version.outputs.tag }}
           name: Resume ${{ steps.version.outputs.tag }}
           generate_release_notes: true
-          files: ${{ steps.asset.outputs.path }}
+          files: ${{ steps.render.outputs.path }}
