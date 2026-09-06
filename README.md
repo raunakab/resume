@@ -1,24 +1,13 @@
 # Resume
 
-My personal resume, written as YAML and rendered to PDF by
-[RenderCV](https://docs.rendercv.com), which compiles through
-[Typst](https://typst.app).
+My personal resume.
+Written as YAML and rendered to PDF by [`rendercv`](https://docs.rendercv.com).
 
-**[Download the latest PDF →](https://github.com/raunakab/resume/releases/latest)**
-
-## Layout
-
-| Path | What it is |
-| --- | --- |
-| [`main.yaml`](./main.yaml) | The resume itself — content and theme. The only file worth editing. |
-| `rendercv_output/` | Build output: `.pdf`, `.html`, `.md`, `.typ`, and one `.png` per page. Gitignored. |
-| [`.github/workflows/release.yml`](./.github/workflows/release.yml) | Renders and publishes a GitHub Release on every merge to `main`. |
+[**Download the latest PDF**](https://github.com/raunakab/resume/releases/latest)
 
 ## Setup
 
-The only prerequisite is [uv](https://docs.astral.sh/uv). It pins Python 3.13
-and installs every dependency, Typst included — there is no separate toolchain
-to install.
+Install [`uv`](https://docs.astral.sh/uv). Then run to download deps:
 
 ```sh
 uv sync
@@ -46,21 +35,20 @@ uv run rendercv render --watch main.yaml
 open rendercv_output/Raunak_Bhagat_CV.pdf
 ```
 
-## Releasing
+## Release Process
 
-Merging to `main` renders the resume and publishes it as a GitHub Release. No
-manual step, no version to bump.
+Merging to `main` renders the resume and publishes it as a GitHub Release.
+No manual step, no version to bump.
 
-- **Tag** — the UTC date, e.g. `2026.09.06`. A second release on the same day
-  becomes `2026.09.06-2`, a third `2026.09.06-3`, and so on.
-- **Asset** — `Raunak_Bhagat_CV_<tag>.pdf`.
-- **Notes** — generated from the merged pull request.
+Tags are the UTC date, e.g. `2026.09.06`; a second release on the same day
+becomes `2026.09.06-2`, a third `2026.09.06-3`. The attached asset is
+`Raunak_Bhagat_CV_<tag>.pdf`.
 
-Merges that touch only prose files skip the workflow; it runs on changes to
-`main.yaml`, `pyproject.toml`, or `uv.lock`. To cut a release by hand, dispatch
-the workflow from the Actions tab.
+Only changes to `main.yaml`, `pyproject.toml`, or `uv.lock` trigger a release,
+so prose-only merges skip it. To cut one by hand, dispatch the workflow from
+the Actions tab.
 
-## Gotcha: stale page images
+## Notes
 
 `rendercv` writes into `rendercv_output/` without clearing it first, so per-page
 `.png` files left over from a longer earlier draft can linger. The PDF is always
